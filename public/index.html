@@ -7,9 +7,9 @@
   <script src="https://use.fontawesome.com/3436a55e57.js"></script>
   <link rel="stylesheet" href="/stylesheets/style.css">
   <title>Document</title>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.5/handlebars.js"></script>
-  <script src="/javascripts/script.js"></script>
+  <script src="javascripts/script.js"></script>
   <script id="contacts" type="text/x-handlebars">
     {{#each contacts}}
     <li>
@@ -23,13 +23,13 @@
           <dt>Tags:</dt>
           <dd>{{tags}}</dd>
         </dl>
-        <button class="edit" id="edit{{id}}""><i class="fa fa-pencil" aria-hidden="true"></i> Edit</button>
+        <button class="edit" id="edit{{id}}"><i class="fa fa-pencil" aria-hidden="true"></i> Edit</button>
         <button class="delete" id="delete{{id}}"><i class="fa fa-trash" aria-hidden="true"></i> Delete</button>
       </div>
     </li>
     {{/each}}
   </script>
-  <script id="tags" type="text/x-handlebars">
+  <script id="tags_available" type="text/x-handlebars">
     <option value="-1" disabled>Available Tags</option>
     {{#each tags}}
       {{#if selected}}
@@ -73,8 +73,8 @@
             <dt></dt>
             <dd>
               <input type="hidden" id="id">
-              <input type='submit' class="form_btn" id="submit" value="Submit">
-              <input type='reset' class="form_btn" id="cancel" value="Cancel">
+              <input type='submit' class="form_btn" id="contact_submit" value="Submit">
+              <input type='reset' class="form_btn cancel" value="Cancel">
             </dd>
           </dl>
         </fieldset>
@@ -87,8 +87,8 @@
             <dd><input type="text" id="name" name="name" required></dd>
             <dt></dt>
             <dd>
-              <input type='submit' class="form_btn" id="submit" value="Submit">
-              <input type='reset' class="form_btn" id="cancel" value="Cancel">
+              <input type='submit' class="form_btn" id="tag_submit" value="Submit">
+              <input type='reset' class="form_btn cancel" value="Cancel">
             </dd>
           </dl>
         </fieldset>
